@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 6vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background: #919191a1;
+    color: white;
+    position: absolute;
+    width: 100vw;
+    font-family: 'Chakra Petch', sans-serif;    
+    font-size: 1em;    
+    z-index: 98; 
+}
+
+body{
+    background: url(../media/stars.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section#banner{
+    position: relative;
+    z-index: 40;
+    padding: 0;
+}
+
+section h1{
+    position: relative;
+    font-family: 'Chakra Petch', sans-serif;  
+    font-size: 3em;
+    z-index: 99;
+    text-align: center;
+    top: 45vh;
+    text-shadow: 3px 3px rgb(114, 108, 108);
+    color: white;
+}
+
+.bodies{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 90;
+}
+#earth{
+    background-image: url(../media/earth.gif);
+    width: 400px;
+    height: 400px;
+    animation:earthmotion 20s linear infinite;
+}
+
+#brownie{
+    background-image: url(../media/brownie.gif);
+    width: 100px;
+    height: 100px;
+    position: relative;
+    float: left;
+    animation:bmotion 30s linear infinite;
+    
+}
+#saturn{
+    background-image: url(../media/saturn.gif);
+    width: 100px;
+    height: 100px;
+    animation: grow 20s linear infinite;
+}
+#bp{
+    background-image: url(../media/bp.gif);
+    width: 100px;
+    height: 100px;
+    float: right;
+    margin: 10vw;
+    animation:bpmotion 2s linear infinite;
+}
+#wet{
+    background-image: url(../media/wet.gif);
+    width: 250px;
+    height: 250px;
+    margin-left: 5vw;
+    animation:wet 10s linear infinite;
+}
+
+#twinkling{
+    display: inline-block;
+    position: absolute;
+    width: 1000vw;
+    height: 100%;
+    background: transparent url(../media/for-twinkling.png);
+    background-repeat: repeat;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 82;
+    animation:bg 30s linear infinite;
+}
+
+@keyframes earthmotion{
+    0%  {transform:translate(200px, -300px);}
+    100% {transform: translate(-500px, 500px);}
+}
+
+@keyframes bmotion{
+    0% {transform: rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+@keyframes grow{
+    0%{transform: scale(.05) rotate(0deg);}
+    100%{transform: scale(5) rotate(-360deg);}
+}
+@keyframes bpmotion {
+    0%{transform: skew(0deg);}
+    50%{transform: skew(25deg);}
+    100%{transform: skew(0deg);}
+}
+@keyframes wet {
+    0%{transform:rotate(0deg) translate(0px);}
+    100%{transform: rotate(360deg) translate(100px, 50px);}
+}
+@keyframes bg {
+    0%  {transform: translate3d(0px, 0px, 0px);}
+    100%{transform: translate3d(1000px, 0px, 0px);}
+}
